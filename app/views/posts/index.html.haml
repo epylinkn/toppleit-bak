@@ -1,0 +1,7 @@
+%h1 Posts
+
+%ul
+- @posts.each do |p|
+  %li
+    %h2= p.title
+    %p= p.body.html_safe
