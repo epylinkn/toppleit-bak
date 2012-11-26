@@ -1,11 +1,6 @@
 Toppleit::Application.routes.draw do
-<<<<<<< HEAD
-=======
-  
-  # get 'signup', to: 'users#new', as: 'signup'
-  get 'login', to: 'sessions#new', as: 'login'
-  get 'logout', to: 'sessions#destroy', as: 'logout'
->>>>>>> 90b9d3c39a8ee5ae01cac9506e1f43e64e8e69b4
+
+
 
   root :to => "posts#index"
   
@@ -19,6 +14,9 @@ Toppleit::Application.routes.draw do
   
   
   match '/about' => 'pages#about'
+  # match '/signup', to: 'users#new'
+  match '/login', to: 'sessions#new'
+  match '/logout', to: 'sessions#destroy'
   
   get '/admin' => 'admin/posts#index'
 end
