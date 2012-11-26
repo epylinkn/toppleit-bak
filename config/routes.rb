@@ -1,7 +1,5 @@
 Toppleit::Application.routes.draw do
 
-
-
   root :to => "posts#index"
   
   resources :posts, :sessions
@@ -12,11 +10,11 @@ Toppleit::Application.routes.draw do
     resources :posts
   end
   
-  
   match '/about' => 'pages#about'
   # match '/signup', to: 'users#new'
   match '/login', to: 'sessions#new'
   match '/logout', to: 'sessions#destroy'
   
-  get '/admin' => 'admin/posts#index'
+  match '/admin' => 'admin/posts#index'
+    
 end
