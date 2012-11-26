@@ -1,0 +1,49 @@
+@import "bootstrap";
+
+html, body {
+  height: 100%;
+}
+
+#minwrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -5em;
+}
+.push {
+  height: 5em;
+}
+
+
+header {
+  height: 5em;
+  background: orange;
+  
+  #navigation {
+    
+    
+    ul {
+      li {
+        list-style: none;
+        display: inline-block;
+        padding-left: 10px;
+        float: right;
+      }
+    }
+  }
+}
+
+#footer {
+  height: 5em;
+  margin: 0 20px;
+  background: orange;
+}
+
+
+#sidebar {
+  background: blue;
+}
+
+#content {
+  background: blue;
+}
