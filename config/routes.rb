@@ -4,7 +4,7 @@ Toppleit::Application.routes.draw do
   
   resources :posts, :sessions
   
-  resources :users, :except => [:new, :create]
+  resources :users#, :except => [:new, :create]
   
   namespace :admin do
     resources :posts
@@ -16,5 +16,4 @@ Toppleit::Application.routes.draw do
   match '/logout', to: 'sessions#destroy'
   
   match '/admin' => 'admin/posts#index'
-    
 end

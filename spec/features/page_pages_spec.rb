@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "Pages" do
+describe "Page pages" do
   describe "About page" do
     before { visit about_path }
     subject { page }

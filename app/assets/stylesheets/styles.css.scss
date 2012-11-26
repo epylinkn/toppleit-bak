@@ -1,5 +1,17 @@
 @import "bootstrap";
 
+@mixin border-radius($radius: 10px) {
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
+
+$c_base: rgb(29, 30, 36);
+$c_cream: rgb(224, 208, 170);
+$c_teal: rgb(141, 168, 147);
+$c_pumpkin: rgb(193, 142, 68);
+$c_brown: rgb(73, 50, 39);
+
 html, body {
   height: 100%;
 }
@@ -16,8 +28,11 @@ html, body {
 
 
 header {
-  height: 5em;
-  background: orange;
+  height: 4em;
+  margin: .5em 1em;
+  padding: 0 0;
+  background: $c_base;
+  @include border-radius(10px);
   
   #navigation {
     
@@ -34,9 +49,10 @@ header {
 }
 
 #footer {
-  height: 5em;
-  margin: 0 20px;
-  background: orange;
+  height: 4em;
+  margin: .5em 1em;
+  background: $c_base;
+  @include border-radius(10px);
 }
 
 
