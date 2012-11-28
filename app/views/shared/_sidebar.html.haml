@@ -1,4 +1,4 @@
 #sidebar
   %ul
-    - @posts.each do |p|
+    - @posts.each do |p| unless @posts.nil?
       %li= p.title
