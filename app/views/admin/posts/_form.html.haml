@@ -1,14 +1,24 @@
-%p
-  %strong Title
-  %br/
-  = f.text_field :title
+= form_for([:admin, @post], html: { id: 'admin_post_form' }) do |f|
+  %p
+    %strong Title
+    %br/
+    = f.text_field :title
 
-%p
-  %strong Publish Date
-  %br/
-  = f.date_select :publish_date
+  %p
+    %strong Publish Date
+    %br/
+    = f.date_select :publish_date
 
-%p
-  %strong Body
-  %br/
-  = f.text_area :body
+  %p.clearfix
+    %strong Body
+    = hidden_field(:post, :body)
+    #editor.clearfix= @post.body
+    
+  = submit_tag('Update Post')
+    
+:plain
+  <script src="http://d1n0x3qji82z53.cloudfront.net/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+:javascript
+  var editor = ace.edit("editor");
+  editor.setTheme("ace/theme/dawn");
+  editor.getSession().setMode("ace/mode/markdown");

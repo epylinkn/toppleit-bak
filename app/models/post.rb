@@ -1,3 +1,3 @@
 class Post < ActiveRecord::Base
-  attr_accessible :body, :publish_date, :title
+  attr_accessible :title, :body, :publish_date
 end

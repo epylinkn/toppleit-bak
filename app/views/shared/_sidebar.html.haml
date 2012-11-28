@@ -1,6 +1,4 @@
 #sidebar
   %ul
-    %li
-      hello
-    %li
-      world
+    - @posts.each do |p|
+      %li= p.title

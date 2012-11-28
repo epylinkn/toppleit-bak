@@ -1,13 +1,14 @@
-%header#header
-  %a{href: root_url}
-    %p ToppleIt
+%header#header.clearfix
+  #logo
+    %a{href: root_url}
+      %h1 ToppleIt
   #navigation
     %ul
-      - if current_user
-        %li= link_to("Admin", admin_path)
+      %li
+        %a{href: root_path}
+          Home
       %li
         %a{href: about_path}
           About
-      %li
-        %a{href: '#'}
-          Blog
+      - if current_user
+        %li= link_to("Admin", admin_path)
