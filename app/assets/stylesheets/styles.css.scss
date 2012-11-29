@@ -97,9 +97,10 @@ footer {
   @include border-radius;
 }
 
-#editor { 
-  width: 550px;
+#editor textarea { 
+  width: 650px;
   height: 400px;
   position: relative;
+  resize: vertical;
   
 }

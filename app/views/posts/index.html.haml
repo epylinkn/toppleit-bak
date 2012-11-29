@@ -1,7 +1,8 @@
 %h1 Posts
 
 %ul
-- @posts.each do |p|
-  %li
-    %h2= p.title + '  //  ' + p.publish_date.to_s
-    %p= p.body.html_safe
+  - @posts.each do |p|
+    %li
+      %h2= p.title + '  //  ' + p.publish_date.to_s
+      / %p= p.body.html_safe
+      %p= get_markdown(p.body).html_safe

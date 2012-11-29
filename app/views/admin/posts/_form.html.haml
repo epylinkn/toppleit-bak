@@ -9,16 +9,18 @@
     %br/
     = f.date_select :publish_date
 
-  %p.clearfix
-    %strong Body
-    = hidden_field(:post, :body)
-    #editor.clearfix= @post.body
+  %p
+    %strong Body (Use Markdown)
+    #editor= f.text_area :body
+  -#   = hidden_field(:post, :body)
+  -#   #editor= @post.body
+    
     
   = submit_tag('Update Post')
     
-:plain
-  <script src="http://d1n0x3qji82z53.cloudfront.net/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
-:javascript
-  var editor = ace.edit("editor");
-  editor.setTheme("ace/theme/dawn");
-  editor.getSession().setMode("ace/mode/markdown");
+-# :plain
+-#   <script src="http://d1n0x3qji82z53.cloudfront.net/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+-# :javascript
+-#   var editor = ace.edit("editor");
+-#   editor.setTheme("ace/theme/dawn");
+-#   editor.getSession().setMode("ace/mode/text");
